@@ -3,7 +3,7 @@
     include('../conn_db.php');
 
     $username = $_POST["username"];
-    $pwd = $_POST["pwd"];
+    $pwd =md5( $_POST["pwd"]);
 
     $query = "SELECT s_id,s_username,s_name FROM shop WHERE
     s_username = '$username' AND s_pwd = '$pwd' LIMIT 0,1";

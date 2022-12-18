@@ -11,8 +11,8 @@
         exit(1);
     }
     if(isset($_POST["btn_add"])){
-        $pwd = $_POST["pwd"];
-        $cfpwd = $_POST["cfpwd"];
+        $pwd =md5 ($_POST["pwd"]);
+        $cfpwd = md5($_POST["cfpwd"]);
         if($pwd != $cfpwd){
             ?>
         <script>
